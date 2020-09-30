@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Datanoms</h1>
+    <div class="container"></div>
+
+
+<style>
+
+h1 {
+   color: #495057; 
+}
+.container {
+  margin: 2rem auto;
+  width: 800px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 1rem;
+}
+.card {
+  background-color: #e5b3fe;
+  padding: 2rem;
+  text-align: center;
+  transition: 1s;
+}
+.card:hover {
+  background-color: #ffcbf2;
+
+}
+    </style>
+
+    <script>
+const container = document.querySelector(".container");
+const datanoms = [
+	{ name: 'Paul', occupation: 'teacher', age: 42 }, 
+	{ name: 'Alex', occupation: 'teacher', age: 44 },
+	{ name: 'Tom', occupation: 'teacher', age: 42 },
+	{ name: 'Andreas', occupation: 'student', age: 33 },
+	{ name: 'Kevin', occupation: 'student', age: 17 },
+	{ name: 'Linus', occupation: 'student', age: 17},
+	{ name: 'Mikael', occupation: 'student', age: 17 },
+	{ name: 'Eddie', occupation: 'student', age: 19 },
+	{ name: 'Kristoffer', occupation: 'student', age: 17 },
+	{ name: 'Rasmus', occupation: 'student', age: 18 },
+	{ name: 'Max', occupation: 'student', age: 17 },
+	{ name: 'Isak', occupation: 'student', age: 17 }
+];
+
+const totalAge = datanoms.reduce((total, amount) => {
+    return total.concat(amount);
+}, []);
+console.log(totalAge);
+
+
+const showDatanoms = () => {
+    let output = ""
+    datanoms.forEach(
+        ({name, occupation, age}) =>
+        (output += `
+
+        <div class="card">
+            <h1>Name</h1>
+        </div>
+        <div class="card">
+            <h1>Occupation</h1>
+        </div>
+        <div class="card">
+            <h1>Age</h1>
+        </div>
+
+
+        <div class="card">
+            <h1>${name}</h1>
+        </div>
+        <div class="card">    
+            <h1>${occupation}</h1>
+        </div>
+        <div class="card">
+            <h1>${age}</h1>
+        </div>  
+        ` )
+    )
+    container.innerHTML = output
+}
+
+document.addEventListener("DOMContentLoaded", showDatanoms)
+
+    </script>
+</body>
+</html>

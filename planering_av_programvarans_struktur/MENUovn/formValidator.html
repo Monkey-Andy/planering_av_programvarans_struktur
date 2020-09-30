@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form_ovn-styles.css">
+</head>
+<body>
+    <h1>HTML Exempel-formulär</h1>
+<form id="example_form">
+<p>
+Obligatoriska fält är bemärkta med stjärna <em>*</em>
+</p>
+    <fieldset>
+    <legend>Kontaktuppgifter</legend>
+    <p><label for="contactname">Namn <em>*</em></label>
+        <input type="text" name="req" id="req" ></p>
+    <p><label for="contactemail">E-post <em>*</em></label>
+        <input type="email" name="email" id="email"></p>
+    <p><label for="pin">Password <em>*</em></label>
+        <input type="password" name="password" id="password" placeholder="yourpassword567"></p>
+     <p><label for="contactage">ålder</label>
+        <input type="number" name="contactage" id="contactage"></p>
+    <p><label for="contactbirth">Födelsedatum</label>
+        <input type="date" name="contactbirth" id="contactbirth" min="2020-10-10"></p>
+    <p><label for="web">Webbsida</label>
+        <input type="url" name="web" id="web" placeholder="http://yoursite.com"></p>
+    <p><label for="message">Ditt meddelande</label>
+    <textarea name="message" id="message"></textarea></p>
+    </fieldset>
+    
+    <fieldset>
+    	<legend>Frågor</legend>
+        <h4>Är det roligt att koda?</h4>
+        <p class="short_input">
+        <input type="radio" name="coding" id="codingfun">
+        <label for="codingfun">JA</label>
+        </p>
+        <p class="short_input">
+       <input type="radio" name="coding" id="codingnofun">
+        <label for="codingnofun">NEJ</label>
+        </p>
+        <h4>Dina favorit programmeringsspråk?</h4>
+        
+        <p class="short_input"><input type="checkbox" name="js" id="js">
+        <label for="js">JavaScript</label></p>
+        
+        <p class="short_input"><input type="checkbox" name="php" id="php">
+        <label for="php">PHP</label></p>
+        
+        <p class="short_input"><input type="checkbox" name="html" id="html">
+        <label for="html">HTML</label></p>
+        
+        <h4>Välj favorit klassrum</h4>
+        <p>
+        <select name="room">
+        	<option value="322">322</option>
+        	<option value="321">321</option>
+        	<option value="329">329</option>
+        </select>
+        </p>
+    </fieldset>
+ 
+ <p>
+ <button type="submit">Skicka formuläret</button>
+ <button type="reset">Töm formuläret</button>
+ </p>
+</form>
+
+
+<script type="text/javascript" src="validate.min.js"></script>
+<script>
+    var validator = new FormValidator('example_form', [{
+        name: 'req',
+        display: 'required',
+        rules: 'required'
+    }, {
+        name: 'password',
+        rules: 'required',
+        rules: [min_length[8]]
+    }, {
+        name: 'email',
+        rules: 'valid_email',
+        depends: function() {
+            return Math.random() > .5;
+        }, 
+    },
+], function(errors, event) {
+        if (errors.length > 0) {
+            // Show the errors
+        }
+    });
+
+    </script>
+
+</body>
+</html>

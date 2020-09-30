@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form_ovn-styles.css">
+</head>
+<body>
+    <h1>Magazine subscription</h1>
+    <form id="form1">
+    <p>
+   Fields that need to be filled in are marked with an asterisk <em>*</em>
+    </p>
+        <fieldset>
+        <legend>Contact information</legend>
+        <p><label for="contactname">Name <em>*</em></label>
+       <input type="text" name="contactname" id="contactname" required minlength="2" maxlength="12" ></p>
+       <p><label for="pin">Password <em>*</em></label>
+        <input type="password" name="password" id="password" placeholder="yourpassword567" minlength="6"></p>
+          <p><label for="pin">PIN <em>*</em></label>
+       <input inputmode="numeric" name="pin" id="pin" placeholder="XXXX" minlength="4" maxlength="4" required pattern="[0-9]{1}[ -][0-9]{1}[ -][0-9]{1}[ -][0-9]{1}" max="9999"></p>
+       <p><label for="contactemail">E-mail <em>*</em></label>
+    <input type="email" name="contactemail" id="contactemail" required></p>
+      <p><label for="contactbirth" >Start subscription</label>
+    <input type="date" name="startsub" id="startsub" min="2020-10-10"></p>
+           <p><label for="web">Your website</label>
+    <input type="url" name="web" id="web" placeholder="http://kickingass.com"></p>
+    <p><label for="message">Do you have anything you would like to tell us?</label>
+    <textarea name="message" id="message"></textarea></p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Questions</legend>
+            <h4>Is coding fun?</h4>
+            <p class="short_input">
+            <input type="radio" name="coding" id="codingfun">
+            <label for="codingfun">YES!</label>
+            </p>
+            <p class="short_input">
+           <input type="radio" name="coding" id="codingnofun">
+            <label for="codingnofun">Nooope</label>
+            </p>
+            <h4>Favorite languages?</h4>
+            
+            <p class="short_input"><input type="checkbox" name="js" id="js">
+            <label for="js">JavaScript</label></p>
+            
+            <p class="short_input"><input type="checkbox" name="php" id="php">
+            <label for="php">PHP</label></p>
+            
+            <p class="short_input"><input type="checkbox" name="html" id="html">
+            <label for="html">HTML</label></p>
+            
+            <p>   
+                <h4>Your favorite color: </h4>
+                <input list="colors" id="favoritecolor" name="favoritecolor" />
+                <datalist id="colors">
+                    <option value="Red">
+                        <option value="Yellow">
+                        <option value="Green">
+                        <option value="Blue">
+                        <option value="Purple">
+                </datalist>
+
+        </fieldset>
+
+     <p>
+     <button type="submit">Submit form</button>
+     <button type="reset">Clear form</button>
+     </p>
+    </form>
+    
+</body>
+</html>

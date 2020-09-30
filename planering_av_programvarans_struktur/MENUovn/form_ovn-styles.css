@@ -1,0 +1,70 @@
+
+/* CSS variablar */
+:root {
+    --white: #fff;
+    --light-gray: #efefef; 
+    --gray:  #ccc; 
+  }
+  
+  body {
+      background-color: var(--light-gray);	
+    font-family: Arial;
+    font-size: 100%;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em;
+  }
+  fieldset {
+      background-color: var(--white);
+      border: 2px solid var(--gray);
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  legend {
+      background-color: var(--white);
+      border: 2px solid var(--gray);
+      padding: 5px 10px;	
+    margin-left: 5px;
+  }
+  
+  label {
+      display: block;
+      width: 120px;
+      float: left;
+  }
+  
+  input, textarea {
+      border: 1px solid var(--gray);
+      background-color: var(--light-gray);
+      padding: 3px;
+      width: 200px;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+      float: left;
+      width: 15px;
+  }
+
+  input[type="list"] {
+      float: left;
+      width: 15px;
+  }
+
+
+  form {
+    margin: 2rem; 
+  }
+  form em {
+      font-weight: bold;
+      color: red;	
+  }
+  form p, form h4 {
+      clear: both;	
+    margin: 0.5rem;
+  }
+  
+  form h4 { padding-top: 1rem; margin-bottom: 0; }
+  
