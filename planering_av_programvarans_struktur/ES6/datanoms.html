@@ -13,7 +13,7 @@
 
 <style>
 
-h1 {
+.container {
    color: #495057; 
 }
 .container {
@@ -52,38 +52,20 @@ const datanoms = [
 	{ name: 'Isak', occupation: 'student', age: 17 }
 ];
 
-const totalAge = datanoms.reduce((total, amount) => {
-    return total.concat(amount);
-}, []);
+const totalAge = datanoms.reduce((age) => age + age);
 console.log(totalAge);
 
 
 const showDatanoms = () => {
-    let output = ""
+    let output = ` <table><tr><th>Name</th><th>Occupation</th><th>Age</th></tr>`
     datanoms.forEach(
         ({name, occupation, age}) =>
         (output += `
-
-        <div class="card">
-            <h1>Name</h1>
-        </div>
-        <div class="card">
-            <h1>Occupation</h1>
-        </div>
-        <div class="card">
-            <h1>Age</h1>
-        </div>
-
-
-        <div class="card">
-            <h1>${name}</h1>
-        </div>
-        <div class="card">    
-            <h1>${occupation}</h1>
-        </div>
-        <div class="card">
-            <h1>${age}</h1>
-        </div>  
+        <tr>
+            <td class="card">${name}</td>
+            <td class="card">${occupation}</td>
+            <td class="card">${age}</td>
+        </tr>  
         ` )
     )
     container.innerHTML = output
