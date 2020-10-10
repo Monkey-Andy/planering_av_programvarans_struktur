@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-<script>
-    const code = [
-        {name: 'john', langs: ['HTML','CSS']}, 
-        {name: 'jack', langs: ['HTML','JavaScript','Python','TypeScript']}, 
-        {name: 'diane', langs: ['Javascript','PHP']}
-];
+  </head>
+  <body>
+    <script>
+      const code = [
+        { name: "john", langs: ["HTML", "CSS"] },
+        { name: "jack", langs: ["HTML", "JavaScript", "Python", "TypeScript"] },
+        { name: "diane", langs: ["Javascript", "PHP"] },
+      ];
 
-const flat = code.reduce((total, amount) => {
-    amount.c.forEach( langs => {
-        total.push(langs);
-    })
-    return total;
-}, []);
-
-console.log(total);
-
-
-</script>
-</body>
+      const flat = code.reduce((total, amount) => {
+        amount.langs.forEach((lang) => {
+          total.push(lang);
+        });
+        return total
+      }, []);
+    </script>
+  </body>
 </html>
