@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pauls_cdcollection>
+<cd>
+	<titel>The Clash</titel>
+	<artist>The Clash</artist>
+	<genre>Punk Rock</genre>
+	<year>1977</year>
+	<recordlabel>CBS</recordlabel>
+	<producer>Mickey Foote</producer>
+</cd>
+<cd>
+	<titel>Give 'Em Enough Rope</titel>
+	<artist>The Clash</artist>
+	<genre>Punk Rock/Hard Rock</genre>
+	<year>1978</year>
+	<recordlabel>CBS, Epic</recordlabel>
+	<producer>Sandy Pearlman</producer>
+</cd>
+<cd>
+	<titel>London Calling</titel>
+	<artist>The Clash</artist>
+	<genre>Post-Punk, Punk Rock</genre>
+	<year>1979</year>
+	<recordlabel>CBS, Epic</recordlabel>
+	<producer>Guy Stevens</producer>
+</cd>
+<cd>
+	<titel>Sandinista!</titel>
+	<artist>The Clash</artist>
+	<genre>Post-Punk, Experimental, Dub</genre>
+	<year>1980</year>
+	<recordlabel>CBS, Epic</recordlabel>
+	<producer>Mikey Dread, The Clash</producer>
+</cd>
+</pauls_cdcollection>
