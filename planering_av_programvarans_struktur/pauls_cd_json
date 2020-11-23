@@ -1,0 +1,36 @@
+jsonAlbums = {
+    {
+     "titel": "Speak & Spell",
+     "artist": "Depeche Mode",
+     "genre": "Synth-Pop",
+     "year": 1981,
+	   "recordlabel": "Mute",
+	   "producer": "Depeche Mode, Daniel Miller"
+    },
+    {
+     "titel": "A Broken Frame",
+     "artist": "Depeche Mode",
+     "genre": "Synth-Pop",
+     "year": 1982,
+	   "recordlabel": "Mute",
+	   "producer": "Daniel Miller, Depeche Mode"
+      },
+    {
+     "titel": "Construction Time Again",
+     "artist": "Depeche Mode",
+     "genre": "Synth-Pop, Industrial",
+     "year": 1983,
+	   "recordlabel": "Mute",
+	   "producer": "Daniel Miller, Depeche Mode"
+      },
+ 	{
+     "titel": "Some Great Reward",
+     "artist": "Depeche Mode",
+     "genre": "Synth-Pop, Industrial",
+     "year": 1984,
+	   "recordlabel": "Mute",
+	   "producer": "Daniel Miller, Depeche Mode, Gareth Jones"
+      }
+};
+myJSON = JSON.stringify(jsonAlbums);
+localStorage.setItem("testJSON", muJSON);
