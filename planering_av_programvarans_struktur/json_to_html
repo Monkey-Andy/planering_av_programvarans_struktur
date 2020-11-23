@@ -34,4 +34,13 @@ const jsonAlbums = `{
       }
 ]}`;
 
-var obj = JSON.parse(jsonAlbums);
+const parseJsonObject = JSON.parse(jsonAlbums),
+	cds = parseJsonObject['cds'];
+	
+console.log(cds);
+
+let list = '';
+for(i=0; i < cds.length; i++) {
+	list += cds[i].titel + "\n" + cds[i].artist + "\n" + cds[i].genre + "\n" + cds[i].year + "\n" + cds[i].recordlabel + "\n" + cds[i].producer + "\n";
+	}
+console.log(list);
